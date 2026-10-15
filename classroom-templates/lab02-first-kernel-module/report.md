@@ -24,7 +24,7 @@ Keep the complete `vermagic`, not only its release prefix.
 ### HOST: `file lab02_hello.ko`
 
 ```text
-lab02_hello.ko: ELF 32-bit LSB relocatable, ARM, EABI5 version 1 (SYSV), BuildID[sha1]=e49b62aa527274ba08a8b6d88a75cc8a251a3ad2, not stripped
+lab02_hello.ko: ELF 32-bit LSB relocatable, ARM, EABI5 version 1 (SYSV), BuildID[sha1]=8458aaac023a58f229a0d62323f3c206f88d6a79, not stripped
 ```
 
 ### HOST: `modinfo lab02_hello.ko | grep vermagic`
@@ -44,7 +44,8 @@ build-tree release (`6.12.96-bone64`), the module's `vermagic` release
 (`6.12.96-bone64`), and the BBB `uname -r` (`6.12.96-bone64`) **all match**.
 Note: `make` printed a warning that the kernel was built with GCC 14.3.0 while
 GCC 14.4.0 was used to build this module; this did not affect the vermagic
-release string or loading, but is recorded here for completeness.
+release string or loading, but is recorded here for completeness. So was rebuild 
+module with matching GCC 14.3.0 toolchain
 
 ## Load, inspect, and unload on BBB
 
